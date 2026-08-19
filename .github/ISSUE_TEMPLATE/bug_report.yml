@@ -1,0 +1,87 @@
+name: Bug report
+description: Report a reproducible defect in the current source
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Context Passage has no supported release yet. Report a bug only when current repository code or documented behavior can be reproduced.
+
+        Report undisclosed vulnerabilities through [GitHub private vulnerability reporting](https://github.com/Yivas/context-passage/security/advisories/new). Remove credentials, tokens, prompts, conversation text, identifiers, active configuration, personal paths, and logs from this form.
+  - type: input
+    id: revision
+    attributes:
+      label: Context Passage revision
+      description: Provide the commit SHA or branch used for the reproduction.
+      placeholder: main at 0123456
+    validations:
+      required: true
+  - type: dropdown
+    id: host
+    attributes:
+      label: Host
+      options:
+        - OpenCode
+        - Pi
+        - Shared core or configuration
+        - Repository documentation
+    validations:
+      required: true
+  - type: input
+    id: host-version
+    attributes:
+      label: Host version
+      description: Required for OpenCode or Pi behavior; enter N/A otherwise.
+      placeholder: OpenCode 1.18.18, Pi 0.84.1, or N/A
+    validations:
+      required: true
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system
+      placeholder: Windows 11 x64, macOS 15 arm64, Ubuntu 24.04 x64
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the defect and when it occurs.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Use synthetic data and the smallest sequence that reproduces the defect.
+      placeholder: |
+        1. Configure...
+        2. Run...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues for this defect.
+          required: true
+        - label: I used synthetic or sanitized data.
+          required: true
+        - label: I removed private and sensitive data from this report.
+          required: true

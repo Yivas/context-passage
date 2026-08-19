@@ -1,0 +1,49 @@
+name: Feature request
+description: Propose a focused change to the public product contract
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        V1 is limited to opt-in OpenCode/Pi conversation continuity and shared MCP declarations. Proposals outside that scope should explain why they cannot wait for a later adapter or milestone.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the user problem without prescribing an implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Explain what the user should observe, including configuration and failure behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Privacy and safety impact
+      description: Address activation, stored data, credentials, network access, host configuration, and rollback.
+    validations:
+      required: true
+  - type: textarea
+    id: fidelity
+    attributes:
+      label: Fidelity and compatibility
+      description: Identify host-specific data that cannot be represented or versions that would require new tests.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: The proposal keeps new behavior disabled by default.
+          required: true
+        - label: The proposal does not require copying credentials or private session data into this issue.
+          required: true
+        - label: I searched existing issues for a related proposal.
+          required: true
