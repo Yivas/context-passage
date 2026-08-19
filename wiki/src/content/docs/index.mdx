@@ -1,0 +1,46 @@
+---
+title: Context Passage
+description: Local, opt-in continuity for conversations and MCP declarations across coding agents.
+hero:
+  tagline: Carry the thread between coding agents without handing your context to a cloud service.
+  actions:
+    - text: Read the overview
+      link: guides/overview/
+      icon: right-arrow
+    - text: Inspect the contract
+      link: guides/product-contract/
+      variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## A narrow contract with hard boundaries
+
+Context Passage is in its foundation phase. The first milestone covers conversation continuity and
+shared MCP declarations between OpenCode and Pi. There is no package to install yet, and the host
+versions under investigation are not supported versions.
+
+<CardGrid>
+  <Card title="Opt in at every boundary">
+    Installation grants no access. A project root, sync direction, historical
+    import, and each MCP resource require explicit approval.
+  </Card>
+  <Card title="Keep sources immutable">
+    Synchronization never deletes or rewrites a source session. Retries must be
+    idempotent and recoverable after interruption.
+  </Card>
+  <Card title="Name every fidelity loss">
+    Tool calls, permissions, hidden reasoning, branches, and runtime state are
+    not treated as equivalent when a destination host cannot represent them.
+  </Card>
+  <Card title="Leave credentials with the host">
+    Shared MCP declarations do not copy tokens, credentials, OAuth state, or
+    host-private values.
+  </Card>
+</CardGrid>
+
+## Follow the current work
+
+The public repository accepts focused design feedback and contributions within the current contract.
+Start with the [capability status](project/status/) before proposing behavior, or read the
+[contribution guide](project/contributing/) before opening a pull request.

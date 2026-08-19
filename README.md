@@ -4,6 +4,9 @@ Context Passage is a planned local continuity layer for AI coding agents. Its fi
 connect OpenCode and Pi so users can opt into conversation continuity and shared MCP declarations
 without uploading their data or copying credentials between hosts.
 
+Read the [public documentation](https://yivas.github.io/context-passage/) for the product contract,
+architecture, capability status, and contribution boundaries.
+
 ## Status
 
 The project is in its foundation phase. The repository contains the public contract and community
